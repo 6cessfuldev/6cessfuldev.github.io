@@ -34,7 +34,10 @@
     <script src="dist/jquery.rss.min.js"></script>
     <script>
       jQuery(function($) {
-        $("#rss-feeds").rss("https://6cessfuldev.tistory.com/rss");
+        $("#rss-feeds").rss("https://6cessfuldev.tistory.com/rss",
+	{
+        entryTemplate:'<li><a href="{url}">[{author}@{date}] {title}</a><br/>{teaserImage}{shortBodyPlain}</li>'
+	});
       });
     </script>
     
