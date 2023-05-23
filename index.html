@@ -27,6 +27,16 @@
 
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+	
+    <!-- jquery.rss -->
+    <script src="lib/jquery-1.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="dist/jquery.rss.min.js"></script>
+    <script>
+      jQuery(function($) {
+        $("#rss-feeds").rss("https://6cessfuldev.tistory.com/rss");
+      });
+    </script>
     
 </head> 
 
@@ -252,9 +262,7 @@
                 <aside class="blog aside section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Latest Blog Posts</h2>
-                        <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">Vanilla RSS plugin</a> to pull in your blog post feeds.</p>
                         <div id="rss-feeds" class="content">
-
                         </div><!--//content-->
                     </div><!--//section-inner-->
                 </aside><!--//section-->
