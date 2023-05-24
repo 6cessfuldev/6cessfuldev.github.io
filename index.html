@@ -28,17 +28,14 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
 	
-    <!-- jquery.rss -->
-    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-    <script src="assets/plugins/jquery_rss/jquery.rss.min.js"></script>
+   <script src="assets/plugins/vanilla-rss/dist/rss.global.min.js"></script>
     <script>
-      jQuery(function($) {
-        $("#rss-feeds").rss("https://6cessfuldev.tistory.com/rss",
-	{
-        entryTemplate:'<li><a href="{url}">[{author}@{date}] {title}</a><br/>{teaserImage}{shortBodyPlain}</li>'
-	});
-      });
+      window.onload = function() {
+        new RSS(
+          document.querySelector("#rss-feeds"),
+          "https://partnernetwork.ebay.de/epn-blog?format=rss"
+        ).render();
+      };
     </script>
     
 </head> 
